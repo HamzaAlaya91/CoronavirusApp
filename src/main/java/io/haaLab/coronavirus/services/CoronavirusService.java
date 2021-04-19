@@ -14,7 +14,6 @@ import javax.annotation.PostConstruct;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import io.haaLab.coronavirus.models.*;
@@ -32,7 +31,7 @@ public class CoronavirusService {
 
 
 	@PostConstruct
-	@Scheduled(cron ="* * * * * *" )
+	//@Scheduled(cron ="* * * * * *" )
 	public void fetchVirusData() throws IOException, InterruptedException {
 		
 		List<LocationStats> newStats = new ArrayList<>();
